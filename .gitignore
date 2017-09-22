@@ -2,3 +2,7 @@
 /bin
 #忽略bin文件夹内部的内容
 /bin/
+/target
+/.settings
+/.classpath
+/.project
