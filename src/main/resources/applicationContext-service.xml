@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-    xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
-    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
-       xmlns:task="http://www.springframework.org/schema/task"
-       xmlns:cache="http://www.springframework.org/schema/cache"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+<!-- 整个配置文件的根节点,可以有一个或者多个bean -->
+	<!-- xmlns="http://www.springframework.org/schema/beans"	 默认命名空间：表示未使用其他命名空间的所有标签的默认命名空间  -->
+	<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"　　 xsi标准命名空间，用于指定义自定义命名空间的schema文件，声明后就可以使用 schemaLocation 属性了-->
+	<!-- xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"　　此处可以不配置，可以用来引用schema在本地的副本-->
+	<!-- xmlns:context="http://www.springframework.org/schema/context" 启用自动扫描或注解装配时的命名空间 -->
+	<!-- xmlns:aop="http://www.springframework.org/schema/aop" 启用aop功能是的命名空间 -->
+	<!-- xmlns:tx="http://www.springframework.org/schema/tx"  启用声明事务是的命名空间 -->
+	<!-- xsi:schemaLocation 声明每个命名空间对应的配置文档的位置 -->
+	<!-- xmlns:jee="http://www.springframework.org/schema/jee"jee标签用来处理javaee标准相关的问题，例如查询一个jndi对象以及定义一个ejb的引用等 -->
+
+<beans  
+		xmlns="http://www.springframework.org/schema/beans"  
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	    xmlns:context="http://www.springframework.org/schema/context"
+	    xmlns:jdbc="http://www.springframework.org/schema/jdbc" 
+	    xmlns:jee="http://www.springframework.org/schema/jee"
+	    xmlns:tx="http://www.springframework.org/schema/tx" 
+ 
+	    xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	    xmlns:task="http://www.springframework.org/schema/task"
+	    xmlns:cache="http://www.springframework.org/schema/cache"
+	    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.1.xsd
         http://www.springframework.org/schema/jdbc
@@ -23,17 +39,21 @@
         http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd
         http://www.springframework.org/schema/task
         http://www.springframework.org/schema/task/spring-task-3.1.xsd"
-        default-lazy-init="true">
+ 	 xmlns:default-lazy-init="true"	>
+<!-- 	 xmlns:default-lazy-init="true"	Spring在启动的时候不加载数据库.  -->
+
 
     <description>Spring Service Configration</description>
 
-    <!--<context:annotation-config/>-->
-    <!-- scan service class with @components ；这里的扫描包名可以按需修改 -->
-    <context:component-scan base-package="com.xiaochuan" />
-
+	<!-- 开启注解处理器  使用此配置则不需要再手动配置依赖关系 -->
     <context:annotation-config/>
 
+	<!--     scan service class with @components ；这里的扫描包名可以按需修改 配置自动扫描需要扫描的位置 -->
+    <context:component-scan base-package="com.xiaochuan" />
+    
 
+
+	<!-- 预加载属性文件,使用PropertyPlaceholderConfigurer进行解析,方便在下发调用 形如${jdbc.username} -->
     <bean id="propertyConfigurer"
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -42,19 +62,24 @@
             </list>
         </property>
     </bean>
-
-
-    <!-- 整合mysqljpa -->
+	<!-- 开启基于@aspectJ切面的注解处理器 -->
+<!-- 	<aop:aspectj-autoproxy/> -->
+	<!-- 	bean 配置目前大多数配置非业务类的系统级别的文件参数和复制 -->
+    <!-- 整合mysqljpa 即Java持久化API-->
     <bean id="mysqlEntityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    	<!-- ref采取引用的方式为相应属性赋值 -->
         <property name="dataSource" ref="mysqlDataSource"></property>
+        <!-- value采取直接赋值的方式为相应属性赋值 -->
         <property name="packagesToScan" value="com.xiaochuan"></property>
         <property name="persistenceUnitName" value="mysqldb"></property>
+        <!-- bean 使用内部匿名类实例的方式为属性赋值,外界无法访问 -->
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <!--<property name="showSql" value="true"></property>-->
             </bean>
         </property>
         <property name="jpaProperties">
+        	<!-- 以property文件类型的形式给指定的属性赋值 -->
             <props>
                 <!--设置外连接抓取树的最大深度 -->
                 <prop key="hibernate.max_fetch_depth">3</prop>
@@ -83,8 +108,7 @@
     </bean>
 
     <!-- 使用annotation定义事务 -->
-    <tx:annotation-driven transaction-manager="mysqltransactionManager"
-                          proxy-target-class="true" />
+    <tx:annotation-driven transaction-manager="mysqltransactionManager"  proxy-target-class="true" />
 
     <!-- Spring Data Jpa配置 repository扫描的包名-->
     <jpa:repositories base-package="com.xiaochuan"

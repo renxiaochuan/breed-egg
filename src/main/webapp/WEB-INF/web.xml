@@ -4,16 +4,19 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+<!--     貌似和国际化有关系 -->
   	<context-param>
         <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
         <param-value>messages</param-value>
     </context-param>
+    
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
             classpath:/applicationContext-service.xml
         </param-value>
     </context-param>
+<!--     配置spring配置文件中场景bean使用哪一个 -->
     <context-param>
         <param-name>spring.profiles.default</param-name>
         <param-value>production</param-value>
