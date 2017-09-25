@@ -24,4 +24,9 @@ public class TestService {
     public List<TestEntity> getAll(){
         return (List<TestEntity>) testDao.findAll();
     }
+    
+    @Transactional(readOnly=false)
+    public void del(long id){
+        testDao.delete(id);
+    }
 }
