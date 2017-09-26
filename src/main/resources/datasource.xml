@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:cache="http://www.springframework.org/schema/cache"
+	 xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/jdbc
+        http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+        http://www.springframework.org/schema/jee
+        http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+        http://www.springframework.org/schema/cache
+        http://www.springframework.org/schema/cache/spring-cache-3.2.xsd
+        http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.directwebremoting.org/schema/spring-dwr
+        http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task-3.1.xsd
+        http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd	
+        
+        "	>
+ 	<bean id="hibernateSessionFactory"
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="mysqlDataSource" />
+        <property name="packagesToScan">
+            <list>
+                <value>com.xiaochuan.entity</value>
+            </list>
+        </property>
+        <property name="mappingLocations">
+            <list>
+                <value>classpath*:hibernate/**/*.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">	org.hibernate.dialect.MySQLDialect</prop>
+<!-- 				设置外连接抓取树的最大深度 -->
+				<prop key="hibernate.max_fetch_depth">3</prop>
+				<prop key="hibernate.jdbc.fetch_size">18</prop>
+				<prop key="hibernate.jdbc.batch_size">10</prop>
+<!-- 				命名规则 My_NAME->MyName -->
+				<prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.DefaultNamingStrategy</prop>
+				<prop key="hibernate.hbm2ddl.auto">${generateDdl}</prop>
+<!-- 				自动建表类型 validate|create|create-drop|update -->
+				<prop key="hibernate.hbm2ddl.auto">validate</prop>
+<!-- 				是否显示SQL -->
+				<prop key="hibernate.show_sql">${showSql}</prop>
+<!-- 				显示SQL是否格式化 -->
+				<prop key="hibernate.format_sql">${format_sql}</prop>
+<!-- 				关闭二级缓存 -->
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+<!-- 				关闭实体字段映射校验 -->
+				<prop key="javax.persistence.validation.mode">none</prop>
+            </props>
+        </property>
+    </bean>
+
+ 
+	<!-- 整合mysqljpa 即Java持久化API -->
+<!-- 	<bean id="hibernateManagerFactory" -->
+<!-- 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"> -->
+		<!-- ref采取引用的方式为相应属性赋值 -->
+<!-- 		<property name="dataSource" ref="mysqlDataSource"></property> -->
+		<!-- value采取直接赋值的方式为相应属性赋值 -->
+<!-- 		<property name="packagesToScan" value="com.xiaochuan"></property> -->
+<!-- 		<property name="persistenceUnitName" value="mysqldb"></property> -->
+		<!-- bean 使用内部匿名类实例的方式为属性赋值,外界无法访问 -->
+<!-- 		<property name="jpaVendorAdapter"> -->
+<!-- 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
+<!-- 				<property name="showSql" value="true"></property> -->
+<!-- 			</bean> -->
+<!-- 		</property> -->
+<!-- 		<property name="jpaProperties"> -->
+			<!-- 以property文件类型的形式给指定的属性赋值 -->
+<!-- 			<props> -->
+<!-- 				设置外连接抓取树的最大深度 -->
+<!-- 				<prop key="hibernate.max_fetch_depth">3</prop> -->
+<!-- 				<prop key="hibernate.jdbc.fetch_size">18</prop> -->
+<!-- 				<prop key="hibernate.jdbc.batch_size">10</prop> -->
+<!-- 				命名规则 My_NAME->MyName -->
+<!-- 				<prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.DefaultNamingStrategy</prop> -->
+<!-- 				<prop key="hibernate.hbm2ddl.auto">${generateDdl}</prop> -->
+<!-- 				自动建表类型 validate|create|create-drop|update -->
+<!-- 				<prop key="hibernate.hbm2ddl.auto">validate</prop> -->
+<!-- 				是否显示SQL -->
+<!-- 				<prop key="hibernate.show_sql">${showSql}</prop> -->
+<!-- 				显示SQL是否格式化 -->
+<!-- 				<prop key="hibernate.format_sql">${format_sql}</prop> -->
+<!-- 				关闭二级缓存 -->
+<!-- 				<prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop> -->
+<!-- 				关闭实体字段映射校验 -->
+<!-- 				<prop key="javax.persistence.validation.mode">none</prop> -->
+<!-- 			</props> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+	<!-- Spring Data Jpa配置 repository扫描的包名 -->
+<!-- 	<jpa:repositories base-package="com.xiaochuan"	transaction-manager-ref="sqltransactionManager" -->
+<!-- 		entity-manager-factory-ref="hibernateManagerFactory" /> -->
+		
+<!-- 	mybatis数据工厂	 -->
+	<bean id="mybatisSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="mysqlDataSource" />
+<!-- 		<property name="configLocation" value="classpath:spring-mybatis.xml"></property> -->
+		<property name="typeAliasesPackage" value="com.xiaochuan.entity"></property>
+        <property name="mapperLocations" value="classpath:mybatis./**/*.xml"></property>  
+		<property name="plugins">
+			<list>
+				<bean class="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">
+					<property name="dialectClass"
+						value="com.github.miemiedev.mybatis.paginator.dialect.OracleDialect"></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
+        <property name="basePackage" value="com.xiaochuan.repository" />  
+        <property name="sqlSessionFactoryBeanName" value="mybatisSessionFactory"></property>  
+    </bean>  
+    
+     <bean id="transactionManager"
+        class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory">
+            <ref local="hibernateSessionFactory" />
+        </property>
+    </bean>
+
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="do*" read-only="false" rollback-for="java.lang.Exception" />
+            <tx:method name="*" propagation="SUPPORTS" read-only="true" />
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="pc"
+            expression="execution(* com.xiaochuan.service.*.*(..))" />
+        <aop:advisor pointcut-ref="pc" advice-ref="txAdvice" />
+    </aop:config>
+    
+    
+    	<!-- Jpa 事务配置 -->
+<!-- 	<bean id="sqltransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"> -->
+<!-- 		<property name="entityManagerFactory" ref="hibernateManagerFactory" /> -->
+<!-- 	</bean> -->
+
+	<!-- 使用annotation定义事务 -->
+<!-- 	<tx:annotation-driven transaction-manager="sqltransactionManager" -->
+<!-- 		proxy-target-class="true" /> -->
+		
+	<beans profile="production">
+<!-- 		<context:property-placeholder -->
+<!-- 			ignore-resource-not-found="true" location="classpath*:/application.properties" /> -->
+			
+		<!-- mysql数据源配置 -->
+		<bean id="mysqlDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+			init-method="init" destroy-method="close">
+			<!-- 驱动名称 -->
+			<property name="DriverClassName" value="${jdbc.driver}" />
+			<!-- JDBC连接串 -->
+			<property name="url" value="${jdbc.url}" />
+			<!-- 数据库用户名称 -->
+			<property name="username" value="${jdbc.username}" />
+			<!-- 数据库密码 -->
+			<property name="password" value="${jdbc.password}" />
+			<!-- 连接池最大使用连接数量 -->
+			<property name="maxActive" value="${jdbc.maxActive}" />
+			<!-- 初始化大小 -->
+			<property name="initialSize" value="${jdbc.initialSize}" />
+			<!-- 获取连接最大等待时间 -->
+			<property name="maxWait" value="${jdbc.maxWait}" />
+			<!-- 连接池最小空闲 -->
+			<property name="minIdle" value="${jdbc.minIdle}" />
+			<!-- 逐出连接的检测时间间隔 -->
+			<property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+			<!-- 最小逐出时间 -->
+			<property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+			<!-- 测试有效用的SQL Query -->
+			<property name="validationQuery" value="SELECT 'x'" />
+			<!-- 连接空闲时测试是否有效 -->
+			<property name="testWhileIdle" value="true" />
+			<!-- 获取连接时测试是否有效 -->
+			<property name="testOnBorrow" value="false" />
+			<!-- 归还连接时是否测试有效 -->
+			<property name="testOnReturn" value="false" />
+		</bean>
+	</beans>
+</beans>
