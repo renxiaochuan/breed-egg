@@ -3465,4 +3465,256 @@ Caused by: java.lang.ClassNotFoundException: org.hibernate.engine.transaction.sp
   [INFO] [2017-09-26 15:34:37][org.springframework.test.context.transaction.TransactionContext]Rolled back transaction for test context [DefaultTestContext@483b0690 testClass = TestMyBatis, testInstance = com.xiaochuan.test.TestMyBatis@687e6293, testMethod = testDao@TestMyBatis, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@479b5066 testClass = TestMyBatis, locations = '{classpath:applicationContext-service.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{production}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
   [INFO] [2017-09-26 15:34:37][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@1c93084c: startup date [Tue Sep 26 15:34:32 CST 2017]; root of context hierarchy
   [INFO] [2017-09-26 15:34:37][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+  [INFO] [2017-09-26 15:59:58][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2133814f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4c15e7fd, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23986957, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23f7d05d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e730495, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7d3a22a9]
+  [INFO] [2017-09-26 15:59:58][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext-service.xml]
+  [INFO] [2017-09-26 15:59:59][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/E:/breed-egg_workspace/breed-egg/target/classes/datasource.xml]
+  [INFO] [2017-09-26 15:59:59][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@1c93084c: startup date [Tue Sep 26 15:59:59 CST 2017]; root of context hierarchy
+  [INFO] [2017-09-26 15:59:59][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [application.properties]
+  [INFO] [2017-09-26 15:59:59][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  [INFO] [2017-09-26 16:00:00][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+  [INFO] [2017-09-26 16:00:01][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO] [2017-09-26 16:00:01][org.hibernate.Version]HHH000412: Hibernate Core {4.2.4.Final}
+  [INFO] [2017-09-26 16:00:01][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+  [INFO] [2017-09-26 16:00:01][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+  [INFO] [2017-09-26 16:00:01][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+  [INFO] [2017-09-26 16:00:01][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO] [2017-09-26 16:00:01][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+  [INFO] [2017-09-26 16:00:02][org.hibernate.tool.hbm2ddl.SchemaValidator]HHH000229: Running schema validator
+  [INFO] [2017-09-26 16:00:02][org.hibernate.tool.hbm2ddl.SchemaValidator]HHH000102: Fetching database metadata
+  [INFO] [2017-09-26 16:00:02][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: test.t_test
+  [INFO] [2017-09-26 16:00:02][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, content]
+  [INFO] [2017-09-26 16:00:02][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2017-09-26 15:59:59",
+	ActiveCount:0,
+	PoolingCount:50,
+	CreateCount:50,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1335157064, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:2147002844, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:752772379, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1397643446, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1001946422, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:28612052, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1579015748, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:2134357721, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:119420356, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:580979398, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:318644008, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1346237136, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:654003462, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:203854885, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1849941462, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1373051324, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:758705661, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:352830403, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1700397528, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:204078646, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1712635211, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1294361489, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:2017980204, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:995911260, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:2028042905, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:103130367, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1104938392, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:426435961, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1781297535, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1099248281, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1624510452, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:777748410, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:662000775, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1326230282, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:266843824, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:2058661465, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:2003311844, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1570160120, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1870054092, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:812609309, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:131582664, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1875304119, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:914293025, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:2107873140, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1142653826, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:502386384, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:1397338694, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:850429804, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:716117291, ConnectTime:"2017-09-26 16:00:00", UseCount:0, LastActiveTime:"2017-09-26 16:00:00"},
+		{ID:968612320, ConnectTime:"2017-09-26 16:00:00", UseCount:2, LastActiveTime:"2017-09-26 16:00:02"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+  [INFO] [2017-09-26 16:00:02][org.springframework.test.context.transaction.TransactionContext]Began transaction (1) for test context [DefaultTestContext@1faf386c testClass = TestMyBatis, testInstance = com.xiaochuan.test.TestMyBatis@4debbf0, testMethod = testDao@TestMyBatis, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2e32fc22 testClass = TestMyBatis, locations = '{classpath:applicationContext-service.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{production}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@6a5e167a]; rollback [true]
+  [INFO] [2017-09-26 16:00:03][com.xiaochuan.test.TestMyBatis]{"age":24,"id":1,"password":"sfasgfaf","userName":"测试"}
+  [INFO] [2017-09-26 16:00:03][org.springframework.test.context.transaction.TransactionContext]Rolled back transaction for test context [DefaultTestContext@1faf386c testClass = TestMyBatis, testInstance = com.xiaochuan.test.TestMyBatis@4debbf0, testMethod = testDao@TestMyBatis, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2e32fc22 testClass = TestMyBatis, locations = '{classpath:applicationContext-service.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{production}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+  [INFO] [2017-09-26 16:00:03][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@1c93084c: startup date [Tue Sep 26 15:59:59 CST 2017]; root of context hierarchy
+  [INFO] [2017-09-26 16:00:03][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+  [INFO] [2017-09-26 17:03:53][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2133814f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4c15e7fd, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23986957, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23f7d05d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e730495, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7d3a22a9]
+  [INFO] [2017-09-26 17:03:53][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext-service.xml]
+  [INFO] [2017-09-26 17:03:54][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/E:/breed-egg_workspace/breed-egg/target/classes/datasource.xml]
+  [INFO] [2017-09-26 17:03:54][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@1c93084c: startup date [Tue Sep 26 17:03:54 CST 2017]; root of context hierarchy
+  [INFO] [2017-09-26 17:03:54][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [application.properties]
+  [INFO] [2017-09-26 17:03:54][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  [INFO] [2017-09-26 17:03:55][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+  [INFO] [2017-09-26 17:03:56][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO] [2017-09-26 17:03:56][org.hibernate.Version]HHH000412: Hibernate Core {4.2.4.Final}
+  [INFO] [2017-09-26 17:03:56][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+  [INFO] [2017-09-26 17:03:56][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+  [INFO] [2017-09-26 17:03:56][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+  [INFO] [2017-09-26 17:03:57][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO] [2017-09-26 17:03:57][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+  [INFO] [2017-09-26 17:03:57][org.hibernate.tool.hbm2ddl.SchemaValidator]HHH000229: Running schema validator
+  [INFO] [2017-09-26 17:03:57][org.hibernate.tool.hbm2ddl.SchemaValidator]HHH000102: Fetching database metadata
+  [INFO] [2017-09-26 17:03:57][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: test.t_test
+  [INFO] [2017-09-26 17:03:57][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, content]
+  [INFO] [2017-09-26 17:03:57][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2017-09-26 17:03:54",
+	ActiveCount:0,
+	PoolingCount:50,
+	CreateCount:50,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1335157064, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:2147002844, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:752772379, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1397643446, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1001946422, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:28612052, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1579015748, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:2134357721, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:119420356, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:580979398, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:318644008, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1346237136, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:654003462, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:203854885, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1849941462, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1373051324, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:758705661, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:352830403, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1700397528, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:204078646, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1712635211, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1294361489, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:2017980204, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:995911260, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:2028042905, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:103130367, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1104938392, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:426435961, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1781297535, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1099248281, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1624510452, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:777748410, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:662000775, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1326230282, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:266843824, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:2058661465, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:2003311844, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1570160120, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1870054092, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:812609309, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:131582664, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1875304119, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:914293025, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:2107873140, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1142653826, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:502386384, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:1397338694, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:850429804, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:716117291, ConnectTime:"2017-09-26 17:03:55", UseCount:0, LastActiveTime:"2017-09-26 17:03:55"},
+		{ID:968612320, ConnectTime:"2017-09-26 17:03:55", UseCount:2, LastActiveTime:"2017-09-26 17:03:57"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+  [INFO] [2017-09-26 17:03:58][org.springframework.test.context.transaction.TransactionContext]Began transaction (1) for test context [DefaultTestContext@6a5e167a testClass = TestMyBatis, testInstance = com.xiaochuan.test.TestMyBatis@60e06f7d, testMethod = testDao@TestMyBatis, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@18137eab testClass = TestMyBatis, locations = '{classpath:applicationContext-service.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{production}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@66a5755]; rollback [true]
+  [INFO] [2017-09-26 17:03:58][com.xiaochuan.test.TestMyBatis]{"age":24,"id":1,"password":"sfasgfaf","userName":"测试"}
+  [INFO] [2017-09-26 17:03:58][org.springframework.test.context.transaction.TransactionContext]Rolled back transaction for test context [DefaultTestContext@6a5e167a testClass = TestMyBatis, testInstance = com.xiaochuan.test.TestMyBatis@60e06f7d, testMethod = testDao@TestMyBatis, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@18137eab testClass = TestMyBatis, locations = '{classpath:applicationContext-service.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{production}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+  [INFO] [2017-09-26 17:03:58][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@1c93084c: startup date [Tue Sep 26 17:03:54 CST 2017]; root of context hierarchy
+  [INFO] [2017-09-26 17:03:58][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+  [INFO] [2017-09-26 17:13:25][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2133814f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4c15e7fd, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23986957, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23f7d05d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e730495, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7d3a22a9]
+  [INFO] [2017-09-26 17:13:25][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext-service.xml]
+  [INFO] [2017-09-26 17:13:25][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/E:/breed-egg_workspace/breed-egg/target/classes/datasource.xml]
+  [INFO] [2017-09-26 17:13:26][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@1c93084c: startup date [Tue Sep 26 17:13:26 CST 2017]; root of context hierarchy
+  [INFO] [2017-09-26 17:13:26][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [application.properties]
+  [INFO] [2017-09-26 17:13:26][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  [INFO] [2017-09-26 17:13:27][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+  [INFO] [2017-09-26 17:13:29][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO] [2017-09-26 17:13:29][org.hibernate.Version]HHH000412: Hibernate Core {4.2.4.Final}
+  [INFO] [2017-09-26 17:13:29][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+  [INFO] [2017-09-26 17:13:29][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+  [INFO] [2017-09-26 17:13:29][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+  [INFO] [2017-09-26 17:13:29][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO] [2017-09-26 17:13:29][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+  [INFO] [2017-09-26 17:13:30][org.hibernate.tool.hbm2ddl.SchemaValidator]HHH000229: Running schema validator
+  [INFO] [2017-09-26 17:13:30][org.hibernate.tool.hbm2ddl.SchemaValidator]HHH000102: Fetching database metadata
+  [INFO] [2017-09-26 17:13:30][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: test.t_test
+  [INFO] [2017-09-26 17:13:30][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, content]
+  [INFO] [2017-09-26 17:13:30][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2017-09-26 17:13:26",
+	ActiveCount:0,
+	PoolingCount:50,
+	CreateCount:50,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1335157064, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:2147002844, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:752772379, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1397643446, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1001946422, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:28612052, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1579015748, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:2134357721, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:119420356, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:580979398, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:318644008, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1346237136, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:654003462, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:203854885, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1849941462, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1373051324, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:758705661, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:352830403, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1700397528, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:204078646, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1712635211, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1294361489, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:2017980204, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:995911260, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:2028042905, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:103130367, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1104938392, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:426435961, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1781297535, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1099248281, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1624510452, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:777748410, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:662000775, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1326230282, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:266843824, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:2058661465, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:2003311844, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1570160120, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1870054092, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:812609309, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:131582664, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1875304119, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:914293025, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:2107873140, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1142653826, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:502386384, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:1397338694, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:850429804, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:716117291, ConnectTime:"2017-09-26 17:13:27", UseCount:0, LastActiveTime:"2017-09-26 17:13:27"},
+		{ID:968612320, ConnectTime:"2017-09-26 17:13:27", UseCount:2, LastActiveTime:"2017-09-26 17:13:30"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+  [INFO] [2017-09-26 17:13:30][org.springframework.test.context.transaction.TransactionContext]Began transaction (1) for test context [DefaultTestContext@6a5e167a testClass = TestMyBatis, testInstance = com.xiaochuan.test.TestMyBatis@60e06f7d, testMethod = testDao@TestMyBatis, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@18137eab testClass = TestMyBatis, locations = '{classpath:applicationContext-service.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{production}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@66a5755]; rollback [true]
+  [INFO] [2017-09-26 17:13:30][com.xiaochuan.test.TestMyBatis]{"age":24,"id":1,"password":"sfasgfaf","userName":"测试"}
+  [INFO] [2017-09-26 17:13:30][org.springframework.test.context.transaction.TransactionContext]Rolled back transaction for test context [DefaultTestContext@6a5e167a testClass = TestMyBatis, testInstance = com.xiaochuan.test.TestMyBatis@60e06f7d, testMethod = testDao@TestMyBatis, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@18137eab testClass = TestMyBatis, locations = '{classpath:applicationContext-service.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{production}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+  [INFO] [2017-09-26 17:13:30][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@1c93084c: startup date [Tue Sep 26 17:13:26 CST 2017]; root of context hierarchy
+  [INFO] [2017-09-26 17:13:30][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
   
