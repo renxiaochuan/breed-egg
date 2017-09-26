@@ -12,14 +12,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by wiker on 2016/3/21.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-//@PropertySource(name = AbstractEnvironment.DEFAULT_PROFILES_PROPERTY_NAME,value = "test")
+// @PropertySource(name =
+// AbstractEnvironment.DEFAULT_PROFILES_PROPERTY_NAME,value = "test")
 @ActiveProfiles("production")
-@ContextConfiguration(locations = { "classpath:applicationContext-service.xml"})
-public class BaseProductionProfiles extends AbstractTransactionalJUnit4SpringContextTests {
+@ContextConfiguration(locations = { "classpath:applicationContext-service.xml" })
+public class BaseProductionProfiles extends
+		AbstractTransactionalJUnit4SpringContextTests {
 
-
-
-    @Test
-    @Ignore
-    public void test(){}
+	@Test
+	@Ignore
+	public void test() {
+	}
 }

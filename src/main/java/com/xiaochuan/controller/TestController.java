@@ -29,7 +29,8 @@ public class TestController {
 		return "index";
 	}
 
-	// rest风格测试 @PathVariable 用于REST风格 那么访问的url就是：http://localhost:8080/test/wiker
+	// rest风格测试 @PathVariable 用于REST风格
+	// 那么访问的url就是：http://localhost:8080/test/wiker
 	@RequestMapping(value = "testRest/{name}", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String testRest(Model model, @PathVariable String name) {
@@ -37,10 +38,12 @@ public class TestController {
 		return "index";
 	}
 
-	// @RequestParam 用于参数绑定 那么访问URL就必须改成：http://localhost:8080/test?testName=test
-	@RequestMapping(value = "test", method = { RequestMethod.GET,
+	// @RequestParam 用于参数绑定
+	// 那么访问URL就必须改成：http://localhost:8080/test?testName=test
+	@RequestMapping(value = "testRequestParam", method = { RequestMethod.GET,
 			RequestMethod.POST })
-	public String testRequestParam(Model model, @RequestParam("testName") String name) {
+	public String testRequestParam(Model model,
+			@RequestParam("testName") String name) {
 		model.addAttribute("name", name);
 		return "index";
 	}
