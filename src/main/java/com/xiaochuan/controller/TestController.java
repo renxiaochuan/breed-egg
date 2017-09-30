@@ -20,7 +20,11 @@ import com.xiaochuan.service.TestService;
 //如果配置成@Controller("path"),那么访问的地址应该是：http://localhost:8080/path/test
 @Controller
 public class TestController {
-
+	// 和Service结合，实现数据库操作。这里是注入的Service，其实直接注入Dao也是可以的
+	// TIPS：Service使用了事务，所以不要直接try catch，不然事务会失效
+	@Autowired
+	private TestService testService;
+	
 	// 映射JSP测试
 	@RequestMapping(value = "test", method = { RequestMethod.GET,
 			RequestMethod.POST })
@@ -58,17 +62,14 @@ public class TestController {
 		return map;
 	}
 
-	// 和Service结合，实现数据库操作。这里是注入的Service，其实直接注入Dao也是可以的
-	// TIPS：Service使用了事务，所以不要直接try catch，不然事务会失效
-	@Autowired
-	private TestService testService;
+
 
 	// 获取列表
 	@RequestMapping(value = "testGetAll", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String testGetAll(Model model, String name) {
-		List<TestEntity> list = testService.getAll();
-		model.addAttribute("list", list);
+//		List<TestEntity> list = testService.getAll();
+//		model.addAttribute("list", list);
 		return "testList";
 	}
 
@@ -78,8 +79,8 @@ public class TestController {
 			RequestMethod.POST })
 	public String testGetAll(Model model, TestEntity entity) {
 		testService.add(entity);
-		List<TestEntity> list = testService.getAll();
-		model.addAttribute("list", list);
+//		List<TestEntity> list = testService.getAll();
+//		model.addAttribute("list", list);
 		return "redirect:/testGetAll";
 	}
 

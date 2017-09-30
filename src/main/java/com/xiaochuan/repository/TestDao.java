@@ -1,11 +1,11 @@
 package com.xiaochuan.repository;
 
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
+import com.xiaochuan.common.service.BaseDaoImpl;
 import com.xiaochuan.entity.TestEntity;
 
-public interface TestDao extends PagingAndSortingRepository<TestEntity, Long>,
-		JpaSpecificationExecutor<TestEntity> {
+@Repository
+public class TestDao extends BaseDaoImpl<Object>  {
 
 }

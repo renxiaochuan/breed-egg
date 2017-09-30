@@ -21,9 +21,9 @@ public class JunitTestService extends BaseProductionProfiles {
 		testService.add(test);
 
 		// 查询数据
-		List<TestEntity> list = (List<TestEntity>) testService.getAll();
-		for (TestEntity t : list) {
-			System.out.println("Content:" + t.getContent());
+		List<Object> list = (List<Object>) testService.getAll();
+		for (Object t : list) {
+			System.out.println("Content:" + t.toString());
 		}
 
 	}
