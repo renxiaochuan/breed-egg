@@ -69,7 +69,7 @@
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- JSP 映射路径，有些为了安全也可以配置成/WEB-INF/，这样jsp是无法直接访问的 -->
-		<property name="prefix" value="/" />
+		<property name="prefix" value="/views/" />
 <!-- 		<property name="prefix" value="/WEB-INF/jsp/" /> -->
 		<property name="suffix" value=".jsp" />
 	</bean>

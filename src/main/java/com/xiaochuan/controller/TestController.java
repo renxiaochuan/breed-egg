@@ -92,4 +92,13 @@ public class TestController {
 		testService.del(id);
 		return "redirect:/testGetAll";
 	}
+
+
+	// 映射JSP测试
+	@RequestMapping(value = "webuploader", method = { RequestMethod.GET,
+			RequestMethod.POST })
+	public String webuploader(Model model, String name) {
+		model.addAttribute("name", name);
+		return "test/webuploader";
+	}
 }

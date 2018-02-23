@@ -13,7 +13,6 @@ import com.xiaochuan.common.dao.BaseDao;
 
 
 @Component("baseDAO")
-@SuppressWarnings("all")
 public class BaseDaoImpl<T> implements BaseDao<T> {
 
     private SessionFactory sessionFactory;

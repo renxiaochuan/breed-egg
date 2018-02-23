@@ -31,13 +31,13 @@
         http://www.springframework.org/schema/cache/spring-cache-3.2.xsd
         http://www.springframework.org/schema/data/jpa
         http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
-        http://www.directwebremoting.org/schema/spring-dwr
-        http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd
+
         http://www.springframework.org/schema/task
         http://www.springframework.org/schema/task/spring-task-3.1.xsd"
-	xmlns:default-lazy-init="true">
+	>
 	<!-- xmlns:default-lazy-init="true" Spring在启动的时候不加载数据库. -->
-
+	<!--http://www.directwebremoting.org/schema/spring-dwr-->
+	<!--http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd-->
 
 	<description>Spring Service Configration</description>
 

@@ -6,6 +6,6 @@
 <title>孵蛋计划</title>
 </head>
 <body>
-	<h2>Hello World!</h2>
+	<h2>欢迎来到孵蛋计划!</h2>
 </body>
 </html>
